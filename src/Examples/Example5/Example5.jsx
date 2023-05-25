@@ -12,9 +12,7 @@ export const Example5 = () => {
     const coords = (
         cross ?
             [[30, 10], [70, 10], [10, 70], [10, 30], [70, 90], [30, 90], [90, 30], [90, 70]] :
-            // [ [90, 70], [90, 30], [70, 10], [30, 10], [10, 30], [10, 70], [30, 90], [70, 90]]
             [[90, 30], [70, 10], [30, 10], [10, 30], [10, 70], [30, 90], [70, 90], [90, 70]]
-            // [[70, 10], [30, 10], [10, 30], [10, 70], [30, 90], [70, 90], [90, 70], [90, 30]]
     )
     const dString = `M${ // M moves (the "pen") to a point without drawing.
         coords.map(c =>
@@ -73,12 +71,3 @@ export const Example5 = () => {
 
     );
 }
-
-const renderPath = (d) => (
-    <path
-        d={d}
-        style={{transition: 'd 800ms'}}
-        // stroke="black"
-    />
-
-)
